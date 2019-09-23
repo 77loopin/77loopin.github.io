@@ -1,12 +1,12 @@
 ---
 title: "첫 포스트"
-date: 2019-09-23 23:54:00 -0400
+date: 2019-09-23 23:00:00 -0000
 categories: Dev General
+tags: General
 ---
 
-### Hello
+## 나의 첫 포스트
 
-내 첫 포스트입니다.
 
 > 참고 내용
 
