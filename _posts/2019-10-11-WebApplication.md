@@ -1,6 +1,6 @@
 ---
 title: WebApplication
-date: 2019-10-11 13:00:00 -0000
+date: 2019-10-11 13:00:00
 categories: ETC
 tags: ETC
 ---
