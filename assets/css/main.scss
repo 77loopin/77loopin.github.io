@@ -1,6 +1,6 @@
 @import "minimal-mistakes";
 
-details {
+p {
     font-size: 15px;
 
     @include breakpoint($medium) {
