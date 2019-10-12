@@ -14,21 +14,18 @@ tags: Database
 ---
 
 1) DDL (Data Definition Language)
-
-- 스키마를 관리하는 작업을 수행하는 명령어
-- CREATE, ALTER, DROP등 데이터베이스 및 테이블을 관리하는 쿼리들
-- 함수, 프로시저 등의 명령어들도 DDL에 해당함
+    - 스키마를 관리하는 작업을 수행하는 명령어
+    - CREATE, ALTER, DROP등 데이터베이스 및 테이블을 관리하는 쿼리들
+    - 함수, 프로시저 등의 명령어들도 DDL에 해당함
 
 2) DCL (Data Control Language)
-
-- 데이터 접근을 제어하는 명령어
-- GRANT를 이용하여 데이터 베이스의 권한을 제어하는 쿼리 (←→ REVOKE)
-- COMMIT, ROLLBACK 등의 명령어가 DCL에 해당함
+    - 데이터 접근을 제어하는 명령어
+    - GRANT를 이용하여 데이터 베이스의 권한을 제어하는 쿼리 (←→ REVOKE)
+    - COMMIT, ROLLBACK 등의 명령어가 DCL에 해당함
 
 3) DML (Data Manipulation Language)
-
-- 데이터를 조작하는 명령어
-- SELECT, INSERT, UPDATE, DELETE 등의 쿼리들
+    - 데이터를 조작하는 명령어
+    - SELECT, INSERT, UPDATE, DELETE 등의 쿼리들
 
 ---
 
