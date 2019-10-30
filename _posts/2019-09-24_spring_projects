@@ -1,0 +1,311 @@
+# Spring Boot
+- 독립 실행이 가능한 스프링 기반 어플리케이션을 쉽게 생성할 수 있다.
+- 스프링 플랫폼과 third-part 라이브러리에 대한 독선적인 안목이 있기 때문에, 쉽게 시작할 수 있다.
+  - 가능한 경우 자동으로 스프링과 third-part 라이브러리 설정한다.
+- 대부분의 Spring boot 프로젝트들은 설정이 거의 필요 없다.
+
+### Feature
+- 독립 실행가능한 스프링 어플리케이션을 생성할 수 있다.
+- Embedded tomcat/jetty/Undertow 를 지원하기 때문에 War 배포가 필요 없다.
+- Starter를 통해 build 설정을 단순화할 수 있다.
+- production-ready(metric, heath check, 외부화 설정 )을 지원한다.
+- xml 설정이 필요 없다.
+
+------------------------------------------
+
+# Spring Framework
+- 광범위한 프로그래밍을 지원하고, 현재 자바 기반 어플리케이션을 위한 설정 모델을 지원한다.
+- 스프링의 중요한 요소는 어플리케이션 레벨에서 인프라를 지원하는것이다. 
+  - 어플리케이션의 'pumbing'에 중점을 두어서, 특정 개발 환경에 불필요한 연계 없이 비즈니스로직에 집중할 수 있다.
+
+### Feature
+| 종류 | 프로젝트 |
+| ---- | ------- |
+| Core technologies | dependency injection, events, resources, i18n, validation, data binding, type conversion, SpEL, AOP. |
+| Testing | mock objects, TestContext framework, Spring MVC Test, WebTestClient. |
+| Data Access | transactions, DAO support, JDBC, ORM, Marshalling XML. |
+| Spring MVC and Spring WebFlux web frameworks. | - |
+| Integration | remoting, JMS, JCA, JMX, email, tasks, scheduling, cache. |
+| Languages | Kotlin, Groovy, dynamic languages. |
+
+----------------------------------------
+# Spring cloud Data Flow
+Spring XD 라는 프로젝트에서 발전된 프로젝트로, 데이터파이프라인을 구축 기능을 제공하는 Pivotal 의 오픈소스 프로젝트이다. 다양한 런타임 환경에서 스프링 부트 애플리케이션을 결합하여 실시간 데이터 통합 또는 실시간 데이터 처리 등의 기능을 수행한다. (https://brunch.co.kr/@springboot/61)
+
+----------------------------------
+# Spring Cloud
+분산 시트템의 몇몇 패턴들을 빠르게 생성할 수 있는 툴을 제공한다.
+
+### Feature
+- 분산/버전 설정
+- 라우팅 / 로드밸런싱
+- 서비스-서비스 호출
+- Circuit Breakers
+  - 한 서비스에 장애가 발생하더라도 다른 서비스에 영향을 주지 않도록 설정한 패턴
+- Global locks
+- 리더 설정 및 클러스터 상태 확인
+- 분산 메시징
+
+----------------------------------
+# Spring Data
+기본 데이터 저장소의 특수한 특성을 유지하면서 데이터 엑세스를 위한 친숙하고 일관된 Spring 기본 프로그래밍 모델을 제공한다.
+관계형/비관계형 DB, mar-reduce 프레임워크, 클라우드 기반 데이터 서비스들로부터 데이터 접근하는 기술을 쉽게 만들어준다.
+
+### Feature
+- 강력한 repository와 사용자 정의 object-mapping 추상화
+- repository 메서드 이름에서 동적 쿼리 유도
+- 기본 속성을 제공하는 기본 도메인 클래스 구현
+- 투명한 감시를 지원 (생성, 수정일)
+- 사용자 정의 repository 코드 통합이 가능
+- 자바 설정 및 사용자 정의 xml namespace를 통해 통합이 쉬움
+- Spring mvc controller를 통한 향상된 통합
+- Experimental support for cross-store persistence
+
+### Main Module
+| Module | Description | 
+| ------ | ------------ |
+| Spring Data Commons | 모든 Spring Data 모듈들의 기본 컨셉 |
+| Spring Data JDBC | JDBC를 지원 |  
+| Spring Data JDBC EXT | JDBC확장. Oracle RAC face connection failover, AQ JMS , 향상된 데이터 타입 지원 | 
+| Spring Data Jpa | JPA 지원 | 
+| Spring Data KeyValue | Map 기반 저장소. key-value 저장으로 spring data 모듈을 쉡게 구축하기위한 SPI(service provider inferface)  |
+| Spring Data LDPA | Spring LDPA를 지원하기위한 repsitory |
+| Spring Data MongoDB | Spring 기반, Object-Document 지원, MongoDB 저장소를 위한 repository |
+| Spring Data Redis | 쉬운 설정 및 redis 접근 지원 |
+| Spring Data REST |  hypermedia-driven RESTful resources로 Spring Data Repository를 추출 |
+| Spring Data For Apache Cassandra | 쉬운 설정 및 카산드라 접속 혹은 큰 스케일, 고가용성, 데이터 지향 성 스프링 어플리케이션 |
+| Spring Data For Apache Geode | 쉬운 설정 및 Geode 접속 지원. 일관성있고 지연시간이 짧은 데이터 지향 성 스프링 어플리케이션  | 
+| Spring Data Form Apache Solr | 쉬운 설정 및 Solr 접속 지원. 검색 지향 성 스프링 어플리케이션 | 
+| Spring Data For Pivotal GemFire | 쉬운 설정 및 Pivotal GemFire 접속 지원. 일관성있고 지연시간이 짧은/빠른 응답 데이터 지향 성 스프링 어플리케이션 |
+
+### Community Modules
+- Spring Data Aerospike
+- Spring Data ArangoDB
+- Spring Data Couchbase
+- Spring Data Azure Cosmos DB
+- Spring Data Cloud Datastore
+- Spring Data Cloud Spanner
+- Spring Data DynamoDB
+- Spring Data Elasticsearch
+- Spring Data Hazelcast 
+- Spring Data Jest
+- Spring Data Neo4j
+- Spring Data Vault
+
+### Related Module
+- Spring Data JDBC Extensions
+- Spring for Apache Hadoop
+- Spring Content
+
+-------------------------------------------------
+# Spring Integration
+스프링 기반 어플리케이션 내에 가벼운 메시징 기반 서비스를 제공하고 선언적 어뎁터를 사용해 외부 시스템과의 통합을 쉽게 해준다. 이런 어뎁터들은 리모팅, 메시징, 스케쥴링과 같이 스프링이 제공하는 기능들을 추상화하고 있다.
+
+Spring Integration 은 스프링 프레임웍의 기본 기능에 Messages, Message Channel, EndPoint 라는 3가지 핵심 컴포넌트를 추가로 제공해 준다.
+(https://springsource.tistory.com/47)
+
+# Spring Batch
+빅데이터 처리, 로깅, tracing, 트랜잭션, job processing statistics, job restart, skip, resouce 관리 등 재사용 가능한 함수들을 제공한다. 향상된 기술 서비스와 최적화와 파티셔닝 기술을 통한 대용량 고성능을 가능하게하는 특징을 제공한다. 
+Simple as well as complex, high-volume batch jobs can leverage the framework in a highly scalable manner to process significant volumes of information.
+
+### Feature
+- transaction manager
+- chunk based processing
+- declative i/o
+- stop/start/restart
+- retry/skip
+- 웹 기반 관리 페이지 
+
+-------------------------------------
+# Spring security
+강력하고 사용자 정의가 가능한 인증 및 access-controll 프레임워크다.
+스프링 기반 어플리케이션의 사실상 보안 표준이다.
+
+인증 및 허가를 제공하는데 중점을 맞춘 프레임워크이다.
+사용자 요구사항에 따라 확장이 쉽운점이 장점이다.
+
+### Feature
+- 인증 및 허가를 위한 포괄적이고 확장적인 지원을 한다.
+- sessing fiztion, click jacking, csrf 등에대한 방어
+- spring mvc와의 선택적 통합
+
+-----------------
+# Spring HATEOAS
+
+(https://engkimbs.tistory.com/780)
+HATEOAS는 Hypermedia As The Engine Of Application State의 약자로 하이퍼미디어를 REST API의 상태 정보를 관리하기 위한 매커니즘으로 활용하는 것을 말합니다. REST API에서 클라이언트에 리소스를 넘겨줄 때 특정 부가적인 리소스의 링크 정보를 넘겨주게 되며 이를 통해 REST API의 리소스 상태에 따른 관리를 진행하게 됩니다.
+
+HATEOAS를 쓰는 이유는 다음과 같은 기존 REST API의 단점을 보완하기 위해서입니다.
+
+1. REST API는 앤드포인트 URL이 정해지고 나면 이를 변경하기 어렵다는 단점이 있습니다. 만일 API의 URL을 변경하게 되면 모든 클라이언트의 URL까지 수정해야하기 때문에 번거로워지므로 기존 다른 API를 지속적으로 추가하게 됩니다. 따라서 URL 관리가 어렵게 됩니다. 
+2. 전달받은 정적 자원의 상태에 따른 요소를 서버 단에서 구현하기 어렵기 때문에 클라이언트 단에서 이 부분에 대한 로직을 처리해야 합니다.
+
+위 단점들을 links 요소를 통해 href 값의 형태로 보내주기 때문에 자원 상태에 대한 처리를 링크에 있는 URL을 통해 처리할 수 있게됩니다.
+
+### Feature
+- Model classes for link, resource representation models
+- Link builder API to create links pointing to Spring MVC controller methods
+- Support for hypermedia formats like HAL
+
+------------------------------------------
+
+# Spring Rest Docs
+Restful 서비스들의 문서화를 돕는다.
+
+Ascidoc으로 작성된 수기로 쓴 문서와 Spring MVC Test을 통해 자동 생성된 snippets를 통합한다.
+Swagger를 통해 생성된 문서의 한계로부터 해방할 수 있도록 한다.
+
+정확하고 간결하고 잘 구성된 문서를 만드는 것을 도와준다.
+이 문서는 사용자들이 최소한의 노력으로 정보를 얻을 수 있도록 도와준다.
+
+------------------------------------------------
+
+# Spring AMQP
+(Advanced Message Queuing Protocol - https://ko.wikipedia.org/wiki/AMQP)
+AMQP 기반 메시징 방법들의 개발에 Spring 핵심 개념을 적용한다.
+메시지를 주고 받기 위한 최상위 추상화의 'Templates'를 제공한다.
+또한 'Listner Container'로 메시지 기반 POJO를 지원한다. 이 라이브러리들은 AMQP 자원들을 관리를 쉽게한다. 또한 DI 및 선언적 환경 설정을 촉진한다. Spring Framework에서 지원하느 JMS 와 비슷하다.
+
+
+- Spring amqp(기본 추상화) / Spring Rabbit (RabbitMQ 구현체) 두 가지로 이루어져있다.
+
+### Feature
+- Inbounding Message 비동기 처리를 위한 Listener Container
+- 메시지 전송/수송을 위한 RebbitTemplate
+- Que를 자동으로 선언하고, 교체하고 바인딩을 하기위한 RabbitAdmin
+
+
+------------------------------
+# Spring Mobile
+모바일 웹 어플리케이션 개발을 간략화하기 위해 Spring MVC를 확장했다.
+Spring Web site에 요청한 단말의 종류를 감지하고, 그에 맞는 화면을 제공한다.
+쉽게 확장할 수 있는 장점이 있다.
+
+
+### Feature
+- 모바일/태블릭 Server-side 감지를 위한 Device-Resolver 추상화
+- 사이트 환경 설정 관리에서 사용자가 normal/mobile/tablet 경험을 선호하는지 여부를 표시할 수 있다.
+- 장치 및 선택적으로 표시된 사이트 환경 설정에 따라 사용자를 모바일, 태블릿, 일반 사이트 중 가장 적합한 사이트로 전환할 수 있는 교환기가 있음
+- 특정 장치에 따라 각기 다른 뷰를 구성 관리하기 위한 Device Aware View Management 제공
+
+--------------------------------
+# Spring for Android
+안드로이드 어플리케이션 개발을 간략화하기 위해 Spring MVC를 확장했다.
+안드로이드 앱에서 스프링 컴포넌트를 제공할 수 있도록 구성된 프레임웍이다.
+스프링 프로젝트와같이, 쉽게 확장할 수 있는 점이 강점이다.
+
+### Feature
+- Rest Client for Android
+- 보안 API에 접근하기 위한 인증 지원
+
+-----------------------------------
+# Spring Web Flow
+Spring MVC를 기반으로 웹 어플리케이션의 '흐름'을 구현할 수 있다.
+흐름은 어떤 비즈니스 역할의 실해을 안내하는 단계를 요약한다.
+
+비행기 체크인, 대출 신청, 쇼핑 카트 체크아웃, 또는 form 확인 단계등과 같이 탐색이 제어되는 상태르 가진 웹 어플리케이션이라는것이 장점이다.
+- 명확한 시작/끝 지점
+- 사용자는 특정 순서에 따라 화면을 지나가야한다.
+- 마지막 스텝까지 변경 사항이 완료되지 않는다.
+- 한번 완료되면 우연히 트랜잭션을 재실행할 수 없다.
+
+더 높은 수준의 추상화에서 플로우를 작성하기 위한 플로우 정의 언어를 제공한다.
+이는 많은 어플리케이션(Spring mvc, JSF, portlet 등)을 변경 없이 통합할 수 있게 해준다.
+
+상태 저장 웹 응용 프로그램에서의 일반적인 문제.
+- 플로우를 보여주기 어렵다.
+- HTTP 세션에 접근하는 많은 코드가 있다.
+- 강제로 navigation 제어를 하는것은 중요하지만 가능하지 않다.
+- 브라우저 back 버튼 지원이 불가능해보임.
+- 브라우저와 서버가 back 버튼으로 동기화되지 않는다.
+- 여러개의 브라우저 탭으로 인해 http session data에 동시성 문제가 발생한다.
+
+Spring Web Flow에서 이런 문제의 해결 방법을 제공한다.
+
+--------------------------------
+# Spring LDAP
+(Lightweight Directory Access Protocol)
+
+-------------------------------------
+# Spring Session
+사용자 세션 정보를 관리하기위한 API 와 구현체를 제공한다.
+
+### Feature
+어플리케이션 컨테이너의 특정 방법에 구속되지 않고 클러스터된 세션들을 지원하는 것이 쉽지 않다.
+또한 투명한 통합을 제공한다
+- HttpSession : RestAPI의 header에 있는 session id를 통해 어플리케이션 컨테이너에서 중립적으로 HttpSession으로 대체하는것이 가능하다.
+- WebSocket - WebSocket 메시지 수신시 HttpSession을 유지하는 기능 제공
+- WebSession - 어플리케이션 컨테이너에서 중립적으로 Spring WebFlux의 Websession으로 대체.
+
+### Modules
+- Spring Session core - 기능과 API를 제공
+- Spring Sessino Data Redis - redis로 Session Repository와 ReactiveSessionRepository 구현을 제공한다.
+- Spring Session JDBC - 관계형 DB로 Session Repository 구현을 제공한다.
+- Spring Session Hazelcast - Hazelcast로 Session Repository 구현을 제공한다.
+
+---------------------------
+# Spring Shell
+Spring 기반 모델을 사용하여 사용자 정의 명령어를 플로그인할 수 있는 대화식 쉘을 제공한다.
+
+Spring Sheel Jar를 통해 자체 명령어를 추가하여 완전한 기능을 갖춘 쉘 어플리케이션을 쉽게 생성할 수 있다.
+Command Line 어플리케이션을 만드는 것은 유용할 수 있다. (rest api 프로젝트 또는 로컬 파일 내용으로 작업할 때)
+
+### Feature
+- 사용자 정의 모델을 제공하는 간단한 어노테이션 기반 프로그래밍 모델
+- 명령 플러그인 기초 전략으로 Spring Boot auto-configuration 사용 
+- 탭 자동완성, colorization, 스크립트 수행
+- command prompt, shell history file name, 결과/에러 처리를 사용자 정의가능
+- 도메인 별 기준에 따른 멸령의 동적 활성화
+- Bean 유효성 검증 API와 통합
+- 기본 명령어 제공 (clear, help, exit)
+- ASCII art Tables, with formatting, alignment, fancy borders, etc. 
+
+-------------------------
+# Spring Flo
+파이프 라인과 간단한 그래프를 위한 html5 visual builder극 제공하는 자바스크립트 라이브러리이다.
+spring cloud data flow에서 스트림 빌더 기초로 사용된다.
+
+connector, control nodes, palettes, state transitions graph topoligies 같은 통합 플로우 디자이너의 기본 요소를 제공한다.
+testual shell, DSL 지원, 워크 플로우 생성 및 검토를 위한graphic canvas가 있다.
+
+### Feature
+- DSL/graphical canvas 을 통한 스트림 파이프라인 생성, 관리, 모니터링
+- 컨텐츠 지원 및 자동 완성 기능이 있는 DSL을 통한 파이프 라인 작성
+- 분산된 배포환경에서 모듈을 시각적으로 보여줌
+- 쉽고 효과적인 파이프라인 구성을 위해 auto-adjustment, grid-layout 기능을 이용
+
+-------------------------------
+# Spring Kafka
+kafka 기반 메시징 솔루션에 스프링 개념을 도입했다.
+메시지를 전송하기위한 높은 수준의 추상화 개념인 'template'을 제공한다.
+@KafkaListener 어노테이션과 'listener container'으로 메시지 기반 pojo를 지원한다.
+이 라이브러리들은 DI와 명확성을 향상시킨다.
+스프링에서 지원하는 jms와 spring ampq에서 지원하는 spring rabbitmq와 비슷하다.
+
+### Feature
+- KafkaTemplate
+- KafkaMessageListenerContainer
+- @KafkaListener
+- KafkaTransactionManager
+- spring-kafka-test jar with embedded kafka server
+
+---------------------------------------
+# Spring State Machine
+스프링 어플리케이션에서 State Machine 개념을 사용할 수 있도록 지원하는 프레임워크.
+
+### Feature
+- 간단한 사용을 위해 flat 1 단계 state machine을 사용하기 쉽다.
+- 복잡한 state 설정을 위해 계층적 state machne 구조를 지원한다.
+- 보다 복잡한 state 설정을 위해 State machine regions를 지원한다. 
+- Usage of triggers, transitions, guards and actions.
+- Type safe configuration adapter.
+- Spring context 밖에서도 쉽게 초기화할 수 있는 builder pattern 제공
+- 일반적인 사례를 위한 Recipes  제공
+- Zookeeper를 기반으로하는 분산 상태 머신
+- event listener 제공
+- UML Eclipse Papyrus modeling.
+- 영구 저장소에 machine 상태 저장
+- Spring IOC와의 통합
+
+동작이 항상 일정하게 보장되고 디버깅이 쉽기 때문에 강력하다.
+machine이 시작되면 동작 규칙이 stone에 저장되기 때문이다.
