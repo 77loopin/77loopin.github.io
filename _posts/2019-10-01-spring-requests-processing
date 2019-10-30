@@ -1,0 +1,46 @@
+---
+title: "Spring 이 Request를 처리하는 과정"
+date: 2019-10-01 13:00:00 -0000
+categories: Spring
+tags: Spring
+---
+
+참고 : http://blog.naver.com/PostView.nhn?blogId=duco777&logNo=220605479481
+
+1. getHandler()
+    - HandlerMapping 검색
+    - 등록되어있는 interceptor 검색
+2. getHandlerAdapter()
+    - HandlerAdapter 검색
+3. applyPreHandle()
+    - interceptor prehandle 수행
+4. ha.handle()
+    - argument resolver / messge converter를 이용하여 파라미터 매핑
+    - controller 수행
+    - messageConverter를 이용하여 response 값 생성
+5. applyDefaultViewName()
+    - view Name 결정
+6. applyPostHandle()
+    - interceptor postHandle 수행
+7. processDispatchResult()
+    - view resolver를 통해, 화면 렌더
+
+-----------------------------------
+### HandlerMapping  
+URL과 요청 정보를 기준으로 어떤 핸들러 오브젝트, 즉 컨트롤러를 사용할 것인지를 결정하는 로직을 담당한다. HandlerMapping 인터페이스를 구현해서 만들 수 있다. 
+
+- SimpleUrlHandlerMapping  
+- WebMvcEndpointHandlerMapping  
+- ControllerEndPointMapping  
+- **RequestMappingHandlerMapping**  
+- BeanNameUrlHandlerMapping   
+- SimpleUrlHandlerMapping  
+- WelcomepageHandlerMapping  
+ 
+
+### HandlerAdapter  
+HandlerMapping으로 선택한 컨트롤러/핸들러를 DispatcherServlet이 호출할 때 사용하는 어댑터다. 
+컨트롤러 타입에는 제한이 없으며, 컨트롤러 호출 방법은 타입에 따라 다르기 때문에 컨트롤러를 했다고 해도 호출 방법을 Dispatcher Servlet이 알 길이 없다. 그래서 컨트롤러 타입을 지원하는 HandlerAdapter가 필요하다. 컨트롤러 타입에 적합한 어댑터를 가져다가 이를 통해 컨트롤러를 호출한다.
+- **RequestMappingHandlerAdapter**
+- HttpRequestHandlerAdapter
+- SimpleControllerHandlerAdapter
