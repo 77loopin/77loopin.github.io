@@ -1,3 +1,10 @@
+---
+title: "Spring Projects 소개"
+date: 2019-09-24 13:00:00 -0000
+categories: Spring
+tags: Spring
+---
+
 # Spring Boot
 - 독립 실행이 가능한 스프링 기반 어플리케이션을 쉽게 생성할 수 있다.
 - 스프링 플랫폼과 third-part 라이브러리에 대한 독선적인 안목이 있기 때문에, 쉽게 시작할 수 있다.
